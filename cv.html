@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+      body {
+        --bg: #4d4d4d;
+        --card-bg: rgba(255, 255, 255, 0.1);
+      }
+      * {
+        font-family: 'Nunito', sans-serif;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      .flex-container {
+        display: flex;
+        gap: 20px;
+        background-color: var(--bg, #4d4d4d);
+      }
+
+      .trees {
+        width: 90%;
+        display: flex;
+        gap: 20px;
+        margin: auto;
+      }
+
+      .tree-wrapper {
+        margin: 30px auto;
+        width: 33%;
+      }
+
+      .tree-wrapper .title {
+        padding: 20px;
+        color: whitesmoke;
+      }
+
+      .tree {
+        border-left: 1px solid var(--card-bg);
+        padding: 0px 0px 0px 20px;
+        width: 100%;
+      }
+
+      .branch {
+        position: relative;
+        width: 100%;
+        min-height: 100px;
+        border-radius: 5px;
+        background-color: var(--card-bg);
+        color: whitesmoke;
+        display: flex;
+        margin-bottom: 30px;
+        padding: 20px;
+      }
+
+      .branch .branch-title {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 1.57;
+        margin-bottom: 4px;
+      }
+
+      .branch .branch-body {
+        font-size: 12px;
+        margin-left: 40px;
+      }
+
+      .branch::before {
+        content: '';
+        display: inline-block;
+        border-bottom: 1px solid var(--card-bg);
+        position: absolute;
+        left: -20px;
+        top: 25px;
+        width: 20px;
+      }
+
+      @media (max-width: 900px) {
+        .branch {
+          padding: 10px;
+        }
+        .branch p {
+          font-size: 11px;
+        }
+        .branch .branch-title {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 690px) {
+        .trees {
+          display: block;
+        }
+        .tree-wrapper {
+          display: block;
+          width: 70%;
+        }
+      }
+      @media (max-width: 500px) {
+        .tree-wrapper {
+          display: block;
+          width: 96%;
+        }
+      }
+    </style>
+  </head>
+  <!-- ctr D or Command D on mac -->
+  <body>
+    <div class="flex-container">
+      <div class="trees">
+        <section class="tree-wrapper">
+          <h3 class="title">School</h3>
+          <div class="tree">
+            <div class="branch">
+              <img />
+              <div class="branch-body">
+                <h3 class="branch-title">University of Leeds</h3>
+                <p>BSc Computer Science</p>
+                <p>2016-2019</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2 -->
+        <section class="tree-wrapper">
+          <h3 class="title">Work</h3>
+          <div class="tree">
+            <div class="branch">
+              <img />
+              <div class="branch-body">
+                <h3 class="branch-title">University of Leeds</h3>
+                <p>BSc Computer Science</p>
+                <p>2016-2019</p>
+              </div>
+            </div>
+            <div class="branch">
+              <div></div>
+            </div>
+            <div class="branch"></div>
+            <div class="branch"></div>
+          </div>
+        </section>
+
+        <!-- 3 -->
+        <section class="tree-wrapper">
+          <h3 class="title">Skills</h3>
+          <div class="tree">
+            <div class="branch">
+              <img />
+              <div class="branch-body">
+                <h3 class="branch-title">University of Leeds</h3>
+                <p>BSc Computer Science</p>
+                <p>2016-2019</p>
+              </div>
+            </div>
+            <div class="branch"></div>
+            <div class="branch"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
